@@ -1,0 +1,75 @@
+/* Loïc Pennamen - 2015 */
+
+.dateliner{ background:#fff; border-radius:5px; margin:10px 0; overflow:hidden; box-shadow:0 1px 2px rgba(0,0,0,.1); }
+.dateliner-container{ height:120px; overflow:hidden; display:table-row; }
+
+.dateliner .dateliner-col-left, 
+.dateliner .dateliner-col-right,
+.dateliner .dateliner-col-center
+{ height:100%; /* float:left; */ display:table-cell; }
+
+.dateliner .dateliner-col-left, 
+.dateliner .dateliner-col-right
+{ 
+width:4%;
+line-height:110px;
+}
+
+.dateliner .dateliner-col-left{ border-top-right-radius:0; border-bottom-right-radius:0;  }
+.dateliner .dateliner-col-right{ border-top-left-radius:0; border-bottom-left-radius:0; }
+.dateliner .dateliner-col-center{ width:92%; overflow:hidden; border-top: 1px solid #eee; background:##f7f7f9;  }
+
+.dateliner .dateliner-slide{ 
+position:relative; left:0; 
+/* width:100%; height:100%;  */
+height:0;
+padding:0 10px; 
+}
+
+.dateliner .dateliner-monthname{ font-size:15px; padding:7px 0 7px 0 }
+
+.dateliner .dateliner-days{ cursor:default; line-height:25px; background:white;  }
+
+.dateliner .dateliner-d{ 
+outline:1px solid #eee;
+display:inline-block; 
+height:25px;
+width:7% /* 100%/14 jours */; 
+font-size:9px; text-align:center;  
+box-shadow:inset 0 0 10px -5px silver;
+cursor:pointer;
+white-space:nowrap;
+direction:rtl;
+}
+	.dateliner .dateliner-d:hover,
+	.dateliner .dateliner-d.ui-selecting{ background:#ecf2f7; }
+	.dateliner .dateliner-d.ui-selected{ background:#3e85c2; color:white; }
+	
+	.dateliner .dateliner-d.today{ outline:1px solid #3e85c2; position:relative;  }
+	
+	.dateliner .dateliner-d.dateliner-d-empty{ box-shadow:none; cursor:inherit; background:none; outline:0; }
+	.dateliner .dateliner-d .str, .dateliner .dateliner-d .int{ }
+	.dateliner .dateliner-d .int{ font-size:14px; font-weight:bold;  }
+	@media (max-width: 650px) {
+		.dateliner .dateliner-d .str{ display:none }
+	}
+	
+
+.dateliner .dateliner-jump{ float:left; clear:left;  }
+
+.dateliner .dateliner-weekday-1{  }
+.dateliner .dateliner-weekday-2{  }
+.dateliner .dateliner-weekday-3{  }
+.dateliner .dateliner-weekday-4{  }
+.dateliner .dateliner-weekday-5{  }
+.dateliner .dateliner-weekday-6{ background:rgba(100, 100, 100, 0.1); }
+.dateliner .dateliner-weekday-0{ background:rgba(100, 100, 100, 0.1); }
+
+/* 
+.dateliner .dateliner-moveme.decalage-1{ margin-left: calc(7% * 1); }
+.dateliner .dateliner-moveme.decalage-2{ margin-left: calc(7% * 2); }
+.dateliner .dateliner-moveme.decalage-3{ margin-left: calc(7% * 3); }
+.dateliner .dateliner-moveme.decalage-4{ margin-left: calc(7% * 4); }
+.dateliner .dateliner-moveme.decalage-5{ margin-left: calc(7% * 5); }
+.dateliner .dateliner-moveme.decalage-6{ margin-left: calc(7% * 6); }
+ */
